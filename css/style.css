@@ -1,0 +1,36 @@
+
+header{
+ width: 100%;
+ background: #C4C4C4;
+ height: 100px;
+}
+
+.main-word{
+	margin-left:160px;
+	margin-top: 35px;
+}
+.word1{
+	padding-top: 90px;
+	padding-left:120px;
+	font-size:300%;
+}
+.left-box
+{
+	margin-left:160px;
+	width:565px;
+	height: 500px;
+	background: #E5E5E5;
+	border: outset black; /* Параметры границы */
+}
+
+button{
+	width:367px;
+	height: 150px;
+	margin-left:94px;
+	margin-top: 118px;
+	background: #9DB270;
+	border: outset black;
+}
+.word2{
+	font-size:330%;
+}
