@@ -1,28 +1,58 @@
 
-header{
+.header{
  width: 100%;
  background: #C4C4C4;
  height: 100px;
 }
 
-.main-word{
-	margin-left:160px;
-	margin-top: 35px;
+.main_word{
+	font-size:300%;
+	margin-left: 15%;
+	padding-top: 35px;
 }
 .word1{
 	padding-top: 90px;
 	padding-left:120px;
 	font-size:300%;
 }
-.left-box
-{
-	margin-left:160px;
-	width:565px;
+/*.parent{
+	margin-left: 15.28%;
+    
+}*/
+.child {
+    background: #E5E5E5;
+    border: outset black;
+    padding: 10px;
+    float: left;
+    width: 35%;
 	height: 500px;
-	background: #E5E5E5;
-	border: outset black; /* Параметры границы */
+    margin-left: 15%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
-
+.child:last-child {
+    margin-right: 0;
+	margin-left: 0%;
+	background: #9DB270;
+}
+.child2:first-child{
+	margin-top: 1%;
+	text-align: center;
+	font-size: 270%;
+}
+.child2{
+	margin-top: 5%;
+	margin-left: 4%;
+	font-size: 250%;
+	float: left;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.child2:last-child{
+	margin-right: 0;
+}
 button{
 	width:367px;
 	height: 150px;
@@ -33,4 +63,34 @@ button{
 }
 .word2{
 	font-size:330%;
+}
+.decision {
+    background: #E5E5E5;
+    border: outset black;
+    padding: 10px;
+    float: left;
+    width: 70%;
+	height: 1000px;
+    margin-left: 15%;
+	margin-top: 75px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.foot{
+	width: 100%;
+ 	background: #C4C4C4;
+ 	height: 160px;
+	padding: 10px;
+    float: left;
+	margin-top: 75px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.creators{
+	font-size:200%;
+	margin-top: 50px;
+	margin-left: 14.5%;
 }

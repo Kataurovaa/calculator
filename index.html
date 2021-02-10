@@ -14,6 +14,9 @@
         h1 {
          font-family: Monospaced, 'Codename Coder Free 4F',bold;
         }
+		p {
+         font-family: Monospaced, 'Codename Coder Free 4F',bold;
+        }
        </style>
 	<title>
 		Calculator
@@ -21,12 +24,51 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div>
-		<header><h1 class="main_word">C A L C U L A T O R</h1></header>
+	<div class="header">
+		<h1 class="main_word">
+			C A L C U L A T O R
+		</h1>
 	</div>
-	<div class="left-box">
-		<h1 class="word1">ЗАГРУЗИТЕ ФАЙЛ</h1>
-		<button><h1 class="word2">ЗАГРУЗИТЬ</h1></button>
+	<div class="parent">
+		<div class="child">
+			<h1 class="word1">ЗАГРУЗИТЕ ФАЙЛ</h1>
+			<button><h1 class="word2">ЗАГРУЗИТЬ</h1></button>
+		</div>
+		<div class="child">
+			<div class = "child2">
+				<p>Наш калькулятор работает с:</p>
+			</div>
+			<div class = "child2">
+				<p>
+					>PI - число π<br>
+					>e - число эйлера<br>
+					>j - мнимая единица<br>
+					>cos()<br>
+					>sin()<br>
+					>tg()<br>
+					>log()<br>
+					>ln()<br>
+				</p>
+			</div>
+			<div class = "child2">
+				<p>
+					>sqrt()<br>
+					>pow()<br>
+					>abs()<br>
+					>exp()<br>
+					>real()<br>
+					>imag()<br>
+					>mag()<br>
+					>phase()
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="decision"></div>
+	<div class="foot">
+		<h1 class="creators">
+			2021   CREATORS:KORNILOV KATAUROVA SHABALIN DAMINOV
+		</h1>
 	</div>
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
