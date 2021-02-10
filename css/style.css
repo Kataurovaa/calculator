@@ -8,7 +8,7 @@
 .main_word{
 	font-size:300%;
 	margin-left: 15%;
-	padding-top: 35px;
+	padding-top: 28px;
 }
 .word1{
 	padding-top: 90px;
@@ -24,7 +24,7 @@
     border: outset black;
     padding: 10px;
     float: left;
-    width: 35%;
+    width: 555px;
 	height: 500px;
     margin-left: 15%;
     -webkit-box-sizing: border-box;
@@ -39,12 +39,12 @@
 .child2:first-child{
 	margin-top: 1%;
 	text-align: center;
-	font-size: 270%;
+	font-size: 250%;
 }
 .child2{
 	margin-top: 5%;
 	margin-left: 4%;
-	font-size: 250%;
+	font-size: 220%;
 	float: left;
 	-webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -69,7 +69,7 @@ button{
     border: outset black;
     padding: 10px;
     float: left;
-    width: 70%;
+    width: 1110px;
 	height: 1000px;
     margin-left: 15%;
 	margin-top: 75px;
