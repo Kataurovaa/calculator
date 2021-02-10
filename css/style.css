@@ -6,19 +6,15 @@
 }
 
 .main_word{
-	font-size:300%;
+	font-size:320%;
 	margin-left: 15%;
-	padding-top: 28px;
+	padding-top: 25px;
 }
 .word1{
 	padding-top: 90px;
 	padding-left:120px;
 	font-size:300%;
 }
-/*.parent{
-	margin-left: 15.28%;
-    
-}*/
 .child {
     background: #E5E5E5;
     border: outset black;
@@ -60,6 +56,30 @@ button{
 	margin-top: 118px;
 	background: #9DB270;
 	border: outset black;
+}
+button:hover {
+  box-shadow:
+    1px 1px #53ea93,
+    2px 2px #53ea93,
+    3px 3px #53ea93,
+    4px 4px #53ea93,
+    5px 5px #53ea93,
+    6px 6px #53ea93,
+    7px 7px #53ea93;
+  -webkit-transform: translateX(-7px);
+  transform: translateX(-7px);
+}
+.child:hover {
+  box-shadow:
+    1px 1px #53ea93,
+    2px 2px #53ea93,
+    3px 3px #53ea93,
+    4px 4px #53ea93,
+    5px 5px #53ea93,
+    6px 6px #53ea93,
+    7px 7px #53ea93;
+  -webkit-transform: translateX(-7px);
+  transform: translateX(-7px);
 }
 .word2{
 	font-size:330%;
