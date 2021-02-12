@@ -1,4 +1,12 @@
-
+.registration{
+    visibility:hidden;
+    position: absolute; z-index: 100;
+    margin-left: 800px;
+    background: #C4C4C4;
+    border: outset black;
+    width: 555px;
+    height: 576px;
+}
 .header{
  width: 100%;
  background: #C4C4C4;
@@ -140,15 +148,7 @@ button:hover {
 	margin-top: 50px;
 	margin-left: 14.5%;
 }
-.registration{
-    display: none;
-    position: absolute; z-index: 100;
-    margin-left: 800px;
-    background: #C4C4C4;
-    border: outset black;
-    width: 555px;
-    height: 576px;
-}
+
 .button-enter{
     width:170px;
 	height: 48px;

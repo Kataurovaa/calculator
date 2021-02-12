@@ -30,7 +30,7 @@
 		</h1>
 		<div class="header-chld">
 			<div class="header-child1"><img src="img/login.svg" width="54" height="54" ></div>
-			<button class="header-child2" type="button" onclick="look(registration)"><p>вход/регистрация</p></button>
+			<button class="header-child2" type="button"  onmousedown="viewDiv()"><p>вход/регистрация</p></button>
 		</div>
 	</div>
 	<div class="parent">
@@ -71,7 +71,7 @@
 	<div class="decision">
 		<h1 class="e-word">ПРИМЕР</h1>
 	</div>
-	<div class="registration">
+	<div class="registration" id="registration">
 		<div class="reg-child" >
 			<p align="center">Войти<br>(Зарегестрироваться)</p>	
 		</div>
@@ -92,11 +92,9 @@
 		</h1>
 	</div>
 	<script>
-		function look(elemId) {
-    	var elem = document.getElementById(elemId);
-    	elem.style.display === "none" ?
-        elem.style.display = "block" : elem.style.display = "none";
-		}
+		function viewDiv(){ 
+			document.getElementById("registration").style.visibility='visible';
+			};
 	</script>
 </body>
 </html>
