@@ -77,9 +77,9 @@
 		</div>
 		<form action="#" class="reg-child" id = "data">
 			<p align="center" class="txt-log">логин</p>
-			<input type="text" placeholder="Логин" class="enter">
+			<input type="text" placeholder="Логин" class="enter" required>
 			<p align="center" class="txt-pass">пароль</p>
-			<input type="text" placeholder="Пароль" class="enter">
+			<input type="text" placeholder="Пароль" class="enter" required>
 			<button type="submit" class="button-enter" form="data"><p>Вход</p></button>
 		</form>
 	</div>
@@ -93,7 +93,12 @@
 	</div>
 	<script>
 		function viewDiv(){ 
-			document.getElementById("registration").style.visibility='visible';
+			if (document.getElementById("registration").style.visibility == 'visible') { 
+			document.getElementById("registration").style.visibility = "hidden";
+			}
+			else {
+			document.getElementById("registration").style.visibility = "visible";
+			}
 			};
 	</script>
 </body>
