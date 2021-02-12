@@ -46,7 +46,7 @@
 
 .word1{
 	padding-top: 90px;
-	padding-left:120px;
+	padding-left:110px;
 	font-size:300%;
 }
 .child {
@@ -84,10 +84,10 @@
 	margin-right: 0;
 }
 .b1{
-	width:367px;
-	height: 150px;
-	margin-left:94px;
-	margin-top: 118px;
+	width:365px;
+	height: 90px;
+	margin-left:80px;
+	margin-top: 80px;
 	background: #9DB270;
 	border: outset black;
 }
@@ -177,4 +177,27 @@ button:hover {
 .reg-child:first-child{
     font-size: 250%;
     margin-top: 50px;
+}
+
+.upload{
+    visibility: hidden;
+    width:365px;
+	height: 90px;
+    margin-left:343px;
+	margin-top: 350px;
+    border: outset black;
+    background: #C4C4C4;
+    position: absolute; z-index: 100;
+}
+.uptext{
+    margin-top: 10px;
+    margin-left:70px;
+    width:365px;
+	height: 35px;
+}
+.up{
+    margin-left:140px;
+    font-size: 100%;
+    width:100px;
+	height: 35px;
 }

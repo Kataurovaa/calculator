@@ -30,13 +30,13 @@
 		</h1>
 		<div class="header-chld">
 			<div class="header-child1"><img src="img/login.svg" width="54" height="54" ></div>
-			<button class="header-child2" type="button"  onmousedown="viewDiv()"><p>вход/регистрация</p></button>
+			<button class="header-child2" type="button"  onmousedown="viewReg()"><p>вход/регистрация</p></button>
 		</div>
 	</div>
 	<div class="parent">
 		<div class="child">
 			<h1 class="word1">ЗАГРУЗИТЕ ФАЙЛ</h1>
-			<button class="b1"><h1 class="word2">ЗАГРУЗИТЬ</h1></button>
+			<button class="b1"  type="button"  onmousedown="viewFile()"><h1 class="word2">ЗАГРУЗИТЬ</h1></button>
 		</div>
 		<div class="child">
 			<div class = "child2">
@@ -84,6 +84,17 @@
 		</form>
 	</div>
 
+	<div class="upload" id="upload">
+		<form method="post" action="php/do-upload.php" enctype="multipart/form-data">
+			<p>
+				<input class="uptext" type="file" name="text" size="50">
+			</p>
+			<p>
+				<input class="up" type="submit" name="submit" value="Загрузить">
+			</p>
+		</form>
+	</div>
+
 
 
 	<div class="foot">
@@ -91,16 +102,7 @@
 			2021   CREATORS:KORNILOV KATAUROVA SHABALIN DAMINOV
 		</h1>
 	</div>
-	<script>
-		function viewDiv(){ 
-			if (document.getElementById("registration").style.visibility == 'visible') { 
-			document.getElementById("registration").style.visibility = "hidden";
-			}
-			else {
-			document.getElementById("registration").style.visibility = "visible";
-			}
-			};
-	</script>
+	<script src ="jss/main.js"></script>
 </body>
 </html>
 
