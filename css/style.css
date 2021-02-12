@@ -5,11 +5,43 @@
  height: 100px;
 }
 
-.main_word{
+.header-child{
 	font-size:320%;
 	margin-left: 15%;
+    margin-right: 150px;
 	padding-top: 25px;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
+.header-child:last-child{
+    margin-top: 20px;
+    margin-right: 0px;
+	margin-left: 15px;
+    padding-top: 0px;
+}
+.header-child2{
+	margin-left: 15%;
+    margin-right: 150px;
+	padding-top: 25px;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.header-child2:last-child{
+    font-size:60%;
+    width:340px;
+	height: 60px;
+	background: #C4C4C4;
+	border: outset #C4C4C4;
+    margin-top: 20px;
+    margin-right: 0px;
+	margin-left: 20px;
+    padding-top: 0px;
+}
+
 .word1{
 	padding-top: 90px;
 	padding-left:120px;
