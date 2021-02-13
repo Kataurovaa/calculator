@@ -24,19 +24,20 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<div class="fill-black" id="fill-black"></div>
 	<div class="header">
 		<h1 class="header-child">
 			C A L C U L A T O R
 		</h1>
 		<div class="header-chld">
 			<div class="header-child1"><img src="img/login.svg" width="54" height="54" ></div>
-			<button class="header-child2"><p>вход/регистрация</p></button>
+			<button class="header-child2" type="button"  onmousedown="viewReg()"><p>вход/регистрация</p></button>
 		</div>
 	</div>
 	<div class="parent">
 		<div class="child">
 			<h1 class="word1">ЗАГРУЗИТЕ ФАЙЛ</h1>
-			<button class="b1"><h1 class="word2">ЗАГРУЗИТЬ</h1></button>
+			<button class="b1"  type="button"  onmousedown="viewFile()"><h1 class="word2">ЗАГРУЗИТЬ</h1></button>
 		</div>
 		<div class="child">
 			<div class = "child2">
@@ -71,11 +72,40 @@
 	<div class="decision">
 		<h1 class="e-word">ПРИМЕР</h1>
 	</div>
+	<div class="registration" id="registration">
+		<button class="exit-reg" type="button" onmousedown="closeFill()"><img src="img/cancel.svg" alt="exit" width="20" height="20"></button>
+		<div class="reg-child" >
+			<p align="center" class="window-word">Войти<br>(Зарегестрироваться)</p>	
+		</div>
+		<form action="#" class="reg-child" id = "data">
+			<p align="center" class="txt-log">логин</p>
+			<input type="text" placeholder="Логин" class="enter" required>
+			<p align="center" class="txt-pass">пароль</p>
+			<input type="text" placeholder="Пароль" class="enter" required>
+			<button type="submit" class="button-enter" form="data"><p>Вход</p></button>
+		</form>
+	</div>
+
+	<div class="upload" id="upload">
+		<form method="post" action="php/do-upload.php" enctype="multipart/form-data">
+			<button class="file-exit" type="button" onmousedown="closeFill()"><img src="img/cancel.svg" alt="exit" width="20" height="20"></button>
+			<p>
+				<input class="uptext" type="file" name="text" size="50">
+			</p>
+			<p>
+				<input class="up" type="submit" name="submit" value="Загрузить">
+			</p>
+		</form>
+	</div>
+	
+
+
 	<div class="foot">
 		<h1 class="creators">
 			2021   CREATORS:KORNILOV KATAUROVA SHABALIN DAMINOV
 		</h1>
 	</div>
+	<script src ="jss/main.js"></script>
 </body>
 </html>
 
