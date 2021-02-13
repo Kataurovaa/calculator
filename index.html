@@ -75,7 +75,7 @@
 	<div class="registration" id="registration">
 		<button class="exit-reg" type="button" onmousedown="closeFill()"><img src="img/cancel.svg" alt="exit" width="20" height="20"></button>
 		<div class="reg-child" >
-			<p align="center">Войти<br>(Зарегестрироваться)</p>	
+			<p align="center" class="window-word">Войти<br>(Зарегестрироваться)</p>	
 		</div>
 		<form action="#" class="reg-child" id = "data">
 			<p align="center" class="txt-log">логин</p>
@@ -88,10 +88,10 @@
 
 	<div class="upload" id="upload">
 		<form method="post" action="php/do-upload.php" enctype="multipart/form-data">
+			<button class="file-exit" type="button" onmousedown="closeFill()"><img src="img/cancel.svg" alt="exit" width="20" height="20"></button>
 			<p>
 				<input class="uptext" type="file" name="text" size="50">
 			</p>
-			<button class="file-exit" type="button" onmousedown="closeFill()"><img src="img/cancel.svg" alt="exit" width="20" height="20"></button>
 			<p>
 				<input class="up" type="submit" name="submit" value="Загрузить">
 			</p>
