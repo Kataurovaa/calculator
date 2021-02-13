@@ -176,15 +176,15 @@ button:hover {
 }
 .reg-child:first-child{
     font-size: 250%;
-    margin-top: 50px;
+    margin-top: 400px;
 }
 
 .upload{
     visibility: hidden;
     width:365px;
 	height: 90px;
-    margin-left:343px;
-	margin-top: 350px;
+    margin-left:650px;
+	margin-top: 300px;
     border: outset black;
     background: #C4C4C4;
     position: absolute; z-index: 100;
@@ -192,12 +192,34 @@ button:hover {
 .uptext{
     margin-top: 10px;
     margin-left:70px;
-    width:365px;
+    width:230px;
 	height: 35px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 .up{
-    margin-left:140px;
+    margin-left:107px;
     font-size: 100%;
-    width:100px;
+    width:150px;
 	height: 35px;
+    border: outset black;
+    background: #AEBC8F;
+}
+.fill-black{
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.7;
+    width:100%;
+	height: 100%;
+    background: #000000;
+}
+.exit-reg{
+    margin-left: 530px;
+}
+.file-exit{
+    position:fixed;
+    margin-top: 0px;
+    margin-left: 340px;
 }

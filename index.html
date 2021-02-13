@@ -24,6 +24,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<div class="fill-black" id="fill-black"></div>
 	<div class="header">
 		<h1 class="header-child">
 			C A L C U L A T O R
@@ -72,6 +73,7 @@
 		<h1 class="e-word">ПРИМЕР</h1>
 	</div>
 	<div class="registration" id="registration">
+		<button class="exit-reg" type="button" onmousedown="closeFill()"><img src="img/cancel.svg" alt="exit" width="20" height="20"></button>
 		<div class="reg-child" >
 			<p align="center">Войти<br>(Зарегестрироваться)</p>	
 		</div>
@@ -89,12 +91,13 @@
 			<p>
 				<input class="uptext" type="file" name="text" size="50">
 			</p>
+			<button class="file-exit" type="button" onmousedown="closeFill()"><img src="img/cancel.svg" alt="exit" width="20" height="20"></button>
 			<p>
 				<input class="up" type="submit" name="submit" value="Загрузить">
 			</p>
 		</form>
 	</div>
-
+	
 
 
 	<div class="foot">
