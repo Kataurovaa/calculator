@@ -5,6 +5,110 @@
 #include <complex.h>
 #define SIZE 100
 
+void insert(char qu[], int* q, char a)
+{
+	qu[*q] = a;
+	*q = *q + 1;;
+}
+
+void push(char stack[], int* s, char a)
+{
+	stack[*s] = a;
+	*s = *s + 1;;
+}
+
+void pop(char stack[], char qu[], int* q, int* s)
+{
+	qu[*q] = stack[*s - 1];
+	*q = *q + 1;
+	*s = *s - 1;
+}
+
+int schet(int arr[], int a)
+{
+	int s, sum, q, b;
+	sum = 0;
+	s = 0;
+	q = 1;
+	for (a; a > 0; a--)
+	{
+		b = a - 1;
+		while (b > 0)
+		{
+			q = q * 10;
+			b--;
+		}
+		sum = sum + arr[s] * q;
+		s++;
+		q = 1;
+	}
+	return sum;
+}
+
+int priority(char a) {
+	switch (a) {
+	case '(':
+		return 0;
+		break;
+
+	case '+':
+	case '-':
+		return 1;
+		break;
+
+	case '*':
+	case '/':
+		return 2;
+		break;
+
+	case '&':
+	case '^':
+		return 3;
+		break;
+	}
+}
+
+int r(int a[], int o, char znak)
+{
+	switch (znak)
+	{
+	case '+':
+		a[o - 2] = a[o - 2] + a[o - 1];
+		return a[o - 2];
+		break;
+
+	case '-':
+		a[o - 2] = a[o - 2] - a[o - 1];
+		return a[o - 2];
+		break;
+
+	case '*':
+		a[o - 2] = a[o - 2] * a[o - 1];
+		return a[o - 2];
+		break;
+
+	case '/':
+		a[o - 2] = a[o - 2] / a[o - 1];
+		return a[o - 2];
+		break;
+
+	case '^':
+		int cons = a[o - 2];
+		while (a[o - 1] > 1)
+		{
+			a[o - 2] = a[o - 2] * cons;
+			a[o - 1] = a[o - 1] - 1;
+		}
+		return a[o - 2];
+		break;
+
+	case '>':
+		a[o - 1] = a[o - 1] - 2 * a[o - 1];
+		return a[o - 1];
+		break;
+	}
+}
+
 float parser(char formula[SIZE])
 {
 
@@ -33,112 +137,6 @@ int main()
     {
         variables[i].val = parser(variables[i].formula);///only for real digit
     }
-	void insert(char qu[], int* q, char a)
-	{
-		qu[*q] = a;
-		*q = *q + 1;;
-	}
-
-	void push(char stack[], int* s, char a)
-	{
-		stack[*s] = a;
-		*s = *s + 1;;
-	}
-
-	void pop(char stack[], char qu[], int* q, int* s)
-	{
-		qu[*q] = stack[*s - 1];
-		*q = *q + 1;
-		*s = *s - 1;
-	}
-
-	int schet(int arr[], int a)
-	{
-		int s, sum, q, b;
-		sum = 0;
-		s = 0;
-		q = 1;
-		for (a; a > 0; a--)
-		{
-			b = a - 1;
-			while (b > 0)
-			{
-				q = q * 10;
-				b--;
-			}
-			sum = sum + arr[s] * q;
-			s++;
-			q = 1;
-		}
-		return sum;
-	}
-
-	int priority(char a) {
-		switch (a) {
-		case '(':
-			return 0;
-			break;
-
-		case '+':
-		case '-':
-			return 1;
-			break;
-
-		case '*':
-		case '/':
-			return 2;
-			break;
-
-		case '1':
-		case '^':
-			return 3;
-			break;
-		}
-	}
-
-	int r(int a[], int o, char znak)
-	{
-		switch (znak)
-		{
-		case '+':
-			a[o - 2] = a[o - 2] + a[o - 1];
-			return a[o - 2];
-			break;
-
-		case '-':
-			a[o - 2] = a[o - 2] - a[o - 1];
-			return a[o - 2];
-			break;
-
-		case '*':
-			a[o - 2] = a[o - 2] * a[o - 1];
-			return a[o - 2];
-			break;
-
-		case '/':
-			a[o - 2] = a[o - 2] / a[o - 1];
-			return a[o - 2];
-			break;
-
-		case '^':
-			int cons = a[o - 2];
-			while (a[o - 1] > 1)
-			{
-				a[o - 2] = a[o - 2] * cons;
-				a[o - 1] = a[o - 1] - 1;
-			}
-			return a[o - 2];
-			break;
-
-		case '>':
-			a[o - 1] = a[o - 1] - 2 * a[o - 1];
-			return a[o - 1];
-			break;
-		}
-	}
-
-
-	int main() {
 		char str[SIZE], stack[SIZE], queue[SIZE];
 		int prip = -1, pric, s = 0, i, q = 0, ai = 0, o = 0, a[SIZE], out[SIZE];
 		fgets(str, SIZE, stdin);
