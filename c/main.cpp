@@ -4,6 +4,7 @@
 #include <math.h>
 #include <complex.h>
 #define SIZE 100
+//:*
 
 float parser(char formula[SIZE])
 {
