@@ -29,10 +29,22 @@
 		<h1 class="header-child">
 			C A L C U L A T O R
 		</h1>
+		<?php if ($_COOKIE['user'] != ''):?> 
+		<div class="header-chld">
+			<div class="header-child1">
+			<p class="txt-user">Привет, <?=$_COOKIE['user']?>!</p>
+				<p class="txt-user">
+					<button type="button" onmousedown="viewProp()"><img src="img/user.svg" width="50" height="50"></button>
+				</p>
+			</div>
+		</div>
+		<?php else: ?>
 		<div class="header-chld">
 			<div class="header-child1"><img src="img/login.svg" width="54" height="54" ></div>
 			<button class="header-child2" type="button"  onmousedown="viewReg()"><p>вход/регистрация</p></button>
 		</div>
+		<?php endif; ?>
+		
 	</div>
 	<div class="parent">
 		<div class="child">
@@ -75,16 +87,42 @@
 	<div class="registration" id="registration">
 		<button class="exit-reg" type="button" onmousedown="closeFill()"><img src="img/cancel.svg" alt="exit" width="20" height="20"></button>
 		<div class="reg-child" >
-			<p align="center" class="window-word">Войти<br>(Зарегестрироваться)</p>	
+			<p align="center" class="window-word">Зарегестрироваться</p>	
 		</div>
-		<form action="#" class="reg-child" id = "data">
-			<p align="center" class="txt-log">логин</p>
-			<input type="text" placeholder="Логин" class="enter" required>
-			<p align="center" class="txt-pass">пароль</p>
-			<input type="text" placeholder="Пароль" class="enter" required>
+		<form action="php/register.php" method="post" class="reg-child" id = "data">
+			<p align="center" class="txt-log" id="txt-log">логин</p>
+			<input type="text" name="login" placeholder="Придумайте логин" class="enter" required>
+			<p align="center" class="txt-pass" id="txt-pass">пароль</p>
+			<input type="password" name="password" placeholder="Придумайте пароль" class="enter" required>
 			<button type="submit" class="button-enter" form="data"><p>Вход</p></button>
 		</form>
+		<button type="button" class="button-to-auth" onmousedown="viewAuth()"><p>Уже есть аккаунт?</p></button>
 	</div>
+
+	<div  class="authorization" id="authorization">
+		<button class="exit-auth" type="button" onmousedown="closeFill()"><img src="img/cancel.svg" alt="exit" width="20" height="20"></button>
+		<div class="auth-child" >
+			<p align="center" class="window-word-a">Войти</p>	
+		</div>
+		<form action="php/auth.php" method="post" class="auth-child" id="data1">
+			<p align="center" class="txt-log-a">логин</p>
+			<input type="text" name="login" placeholder="Введите логин" class="enter-a" required>
+			<p align="center" class="txt-pass-a" id="txt-pass">пароль</p>
+			<input type="password" name="password" placeholder="Введите пароль" class="enter-a" required>
+			<button type="submit" class="button-enter" form="data1"><p>Вход</p></button>
+		</form>
+		<button type="button" class="button-to-reg" onmousedown="viewReg()"><p>Нет аккаунта?</p></button>
+	</div>
+
+	<div class="property" id="property">
+		<a href="php/exit.php"><p>Выйти</p></a>
+	</div>
+
+
+
+
+
+
 
 	<div class="upload" id="upload">
 		<form method="post" action="php/do-upload.php" enctype="multipart/form-data">
