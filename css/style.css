@@ -1,11 +1,36 @@
 .registration{
     visibility:hidden;
     position: absolute; z-index: 100;
-    margin-left: 800px;
+    margin-left: 450px;
     background: #C4C4C4;
     border: outset black;
     width: 555px;
     height: 576px;
+}
+.authorization{
+    visibility:hidden;
+    position: absolute; z-index: 101;
+    margin-left: 450px;
+    background: #C4C4C4;
+    border: outset black;
+    width: 555px;
+    height: 576px;
+}
+.property{
+    visibility:hidden;
+    position: fixed; z-index: 101;
+    margin-left: 1040px;
+    background: #C4C4C4;
+    border: outset black;
+    width: 300px;
+    height: 218px;
+}
+.txt-user{
+    float: left;
+    margin-left: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 .header{
  width: 100%;
@@ -16,20 +41,42 @@
 .header-child{
 	font-size:320%;
 	margin-left: 15%;
-    margin-right: 150px;
+    margin-right: 0px;
 	padding-top: 25px;
     float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-.header-chld{
+/*.header-chld{
     padding-top: 20px;
     margin-right: 0px;
+}*/
+.txt-user:first-child{
+    margin-top:25px;
+    margin-left: -205px;
+    margin-right: 10px;
+    font-size: 170%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
-.header-child1{
+.txt-user:last-child{
+    margin-top:10px;
+}
+.header-child1:first-child{
     padding-top:5px;
     padding-left: 100px;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.header-child1:last-child{
+    position: fixed;
+    padding-top:10px;
+    margin-left: 1190px;
+    border-radius: 50%;
     float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -166,7 +213,23 @@ button:hover {
     font-size: 250%;
     margin-top: 45px;
 }
+.txt-log-a{
+    font-size: 250%;
+    margin-top: 50px;
+}
+.txt-pass-a{
+    font-size: 250%;
+    margin-top: 45px;
+}
 .enter{
+    font-size: 160%;
+    width:322px;
+	height: 61px;
+    margin-left:117px;
+    margin-top: 5px;
+    border: outset black;
+}
+.enter-a{
     font-size: 160%;
     width:322px;
 	height: 61px;
@@ -178,6 +241,10 @@ button:hover {
     font-size: 250%;
     margin-top: 400px;
 }
+.auth-child:first-child{
+    font-size: 250%;
+    margin-top: 400px;
+}
 
 .upload{
     visibility: hidden;
@@ -186,7 +253,7 @@ button:hover {
     margin-left:650px;
 	margin-top: 230px;
     border: outset black;
-    background: #C4C4C4;
+    background: #FFFFFF;
     position: fixed; z-index: 100;
 }
 .uptext{
@@ -218,6 +285,9 @@ button:hover {
 .exit-reg{
     margin-left: 530px;
 }
+.exit-auth{
+    margin-left: 530px;
+}
 .file-exit{
     position:fixed;
     margin-top: 0px;
@@ -225,4 +295,25 @@ button:hover {
 }
 .window-word{
     font-size: 200%;
+}
+.window-word-a{
+    font-size: 200%;
+}
+.button-to-reg{
+    margin-top: 50px;
+    margin-left: 200px;
+    background: #C4C4C4;
+    border: outset #a5a5a5;
+    width: 150px;
+    height: 40px;
+    font-size: 110%;
+}
+.button-to-auth{
+    margin-top: 50px;
+    margin-left: 200px;
+    background: #C4C4C4;
+    border: outset #a5a5a5;
+    width: 150px;
+    height: 40px;
+    font-size: 110%;
 }
