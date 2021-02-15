@@ -1,8 +1,0 @@
-# Разрешить доступ только к файлам определенного расширения 
-<FilesMatch "\.(jpg|png|gif)$|^$">   
-Order deny,allow   
-Allow from all 
-</FilesMatch>
- 
-# Выключим php 
-php_flag engine 0

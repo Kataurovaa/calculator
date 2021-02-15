@@ -6,9 +6,9 @@
 
 int main()
 {
-    FILE* inp = fopen("input.txt", "r");
+    FILE* inp = fopen("calculator/uploades/1.txt", "r");
     int a, b;
     fscanf(inp, "%d + %d", &a, &b);
-    printf("%d", a + b);
+    printf("%d+%d=%d",a,b,a + b);
     return 0;
 }
