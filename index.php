@@ -105,9 +105,6 @@
 							$str = fgets($fd);
 							fclose("uploades/1.txt");
 							echo $str;
-							$output=null;
-							$retval=null;
-							exec('whoami', $output, $retval);
 						}
 					?>		
 				</h1>
@@ -115,7 +112,11 @@
 		</div>
 		<div>
 			<h1 class="e-word" align="center">РЕШЕНИЕ</h1>
-			<div class="d-field"></div>
+			<div class="d-field">
+				<?php
+					system("C:/Server/data/htdocs/calculator/calc/release/calc.exe") or die("Err");
+				?>
+			</div>
 		</div>
 	</div>
 	<div class="registration" id="registration">
