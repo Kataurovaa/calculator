@@ -27,6 +27,7 @@
 }
 .txt-user{
     float: left;
+    position: absolute;
     margin-left: 10px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -48,10 +49,10 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-/*.header-chld{
+.header-chld{
     padding-top: 20px;
-    margin-right: 0px;
-}*/
+    margin-right: 0px;;
+}
 .txt-user:first-child{
     margin-top:25px;
     margin-left: -205px;
@@ -66,7 +67,7 @@
 }
 .header-child1:first-child{
     padding-top:5px;
-    padding-left: 100px;
+    padding-left: 250px;
     float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -316,4 +317,34 @@ button:hover {
     width: 150px;
     height: 40px;
     font-size: 110%;
+}
+
+.field{
+    margin-left: auto;
+    margin-right: auto;
+    width: 850px;
+    height: 80px;
+    background: #FFFFFF;
+    margin-left: 115px;
+    margin-top: 40px;
+}
+.e-word{
+     margin-left: auto;
+     margin-right: auto;
+     width: 200px;
+     margin-top: 40px;
+     font-size: 350%;
+}
+.e{
+    padding-top:25px;
+    padding-left: 30px;
+}
+
+.d-field{
+    margin-left: auto;
+    margin-right: auto;
+    width: 850px;
+    height: 520px;
+    background: #FFFFFF;
+    margin-top: 40px;
 }

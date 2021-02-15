@@ -1,3 +1,8 @@
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -82,7 +87,26 @@
 		</div>
 	</div>
 	<div class="decision">
-		<h1 class="e-word">ПРИМЕР</h1>
+		<div  class="exer">
+			<h1 class="e-word">ПРИМЕР</h1>
+			<div class="field">
+				<h1 class="e"><?php
+						if (isset($_POST['submit']) and $_FILES)
+						{
+							move_uploaded_file($_FILES['file']['tmp_name'],"uploades/".$_FILES['file']['name']);
+							$fd = fopen("uploades/tim.txt", 'r') or die("не удалось открыть файл");
+							$str = fgets($fd);
+							$str = fgets($fd);
+							echo $str;
+						}
+					?>		
+				</h1>
+			</div>
+		</div>
+		<div>
+			<h1 class="e-word">РЕШЕНИЕ</h1>
+			<div class="d-field"></div>
+		</div>
 	</div>
 	<div class="registration" id="registration">
 		<button class="exit-reg" type="button" onmousedown="closeFill()"><img src="img/cancel.svg" alt="exit" width="20" height="20"></button>
@@ -125,10 +149,10 @@
 
 
 	<div class="upload" id="upload">
-		<form method="post" action="php/do-upload.php" enctype="multipart/form-data">
+		<form method="post" action="" enctype="multipart/form-data">
 			<button class="file-exit" type="button" onmousedown="closeFill()"><img src="img/cancel.svg" alt="exit" width="20" height="20"></button>
 			<p>
-				<input class="uptext" type="file" name="text" size="50">
+				<input class="uptext" type="file" name="file" size="50">
 			</p>
 			<p>
 				<input class="up" type="submit" name="submit" value="Загрузить">
