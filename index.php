@@ -88,15 +88,22 @@
 	</div>
 	<div class="decision">
 		<div  class="exer">
-			<h1 class="e-word">ПРИМЕР</h1>
+			<h1 class="e-word" align="center">ПРИМЕР</h1>
 			<div class="field">
 				<h1 class="e"><?php
 						if (isset($_POST['submit']) and $_FILES)
 						{
-							move_uploaded_file($_FILES['file']['tmp_name'],"uploades/".$_FILES['file']['name']);
-							$fd = fopen("uploades/tim.txt", 'r') or die("не удалось открыть файл");
+							// Получаем расширение файла
+							$file_ext =  strtolower(strrchr($_FILES['file']['name'],'.'));
+							// Генерируем случайное число
+							$file_name = 1;
+							// Формируем путь на сервере
+							$uploadedFile  = "uploades/".$file_name.$file_ext;
+							move_uploaded_file($_FILES['file']['tmp_name'],$uploadedFile);
+							$fd = fopen("uploades/1.txt", 'r') or die("не удалось открыть файл");
 							$str = fgets($fd);
 							$str = fgets($fd);
+							fclose("uploades/1.txt");
 							echo $str;
 						}
 					?>		
@@ -104,8 +111,12 @@
 			</div>
 		</div>
 		<div>
-			<h1 class="e-word">РЕШЕНИЕ</h1>
-			<div class="d-field"></div>
+			<h1 class="e-word" align="center">РЕШЕНИЕ</h1>
+			<div class="d-field">
+				<?php
+					system("C:/Server/data/htdocs/calculator/calc/release/calc.exe") or die("Err");
+				?>
+			</div>
 		</div>
 	</div>
 	<div class="registration" id="registration">
