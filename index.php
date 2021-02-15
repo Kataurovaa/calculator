@@ -105,6 +105,9 @@
 							$str = fgets($fd);
 							fclose("uploades/1.txt");
 							echo $str;
+							$output=null;
+							$retval=null;
+							exec('whoami', $output, $retval);
 						}
 					?>		
 				</h1>
