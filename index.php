@@ -113,9 +113,11 @@
 		<div>
 			<h1 class="e-word" align="center">РЕШЕНИЕ</h1>
 			<div class="d-field">
+				<h1 class="d-word">
 				<?php
 					system("C:/Server/data/htdocs/calculator/calc/release/calc.exe") or die("Err");
 				?>
+				</h1>
 			</div>
 		</div>
 	</div>

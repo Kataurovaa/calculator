@@ -348,3 +348,8 @@ button:hover {
     background: #FFFFFF;
     margin-top: 40px;
 }
+
+.d-word{
+    padding-left:30px;
+    padding-top:25px;
+}
