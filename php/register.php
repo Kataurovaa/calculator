@@ -13,7 +13,13 @@
     $password = md5($password."cfguw2");
     $mysql = new mysqli('localhost', 'root', '', 'register');
     $mysql->query("INSERT INTO `users` (`login`, `password`) VALUES('$login', '$password')");
-
+    $result = $mysql->query("SELECT * FROM `users` WHERE `login` = '$login' AND `password` = '$password'");
+    $user = $result->fetch_assoc();
+    if (count($user) > 0) {
+        header('Location: /calculator');
+        exit();
+    }
+    setcookie('user', $login, time() + 3600, "/");
     $mysql->close();
 
     header('Location: /calculator');

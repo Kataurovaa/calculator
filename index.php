@@ -1,8 +1,3 @@
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,16 +30,13 @@
 			C A L C U L A T O R
 		</h1>
 		<?php if ($_COOKIE['user'] != ''):?> 
-		<div class="header-chld">
-			<div class="header-child1">
-			<p class="txt-user">Привет, <?=$_COOKIE['user']?>!</p>
-				<p class="txt-user">
-					<button type="button" onmousedown="viewProp()"><img src="img/user.svg" width="50" height="50"></button>
+		<div class="header-child">
+				<p class="txt-user">Привет, <?=$_COOKIE['user']?>!</p>
+				<p class="txt-user"><button class="txt-user-b" type="button" onmousedown="viewProp()"><img src="img/user.svg" width="50" height="50"></button>
 				</p>
-			</div>
 		</div>
 		<?php else: ?>
-		<div class="header-chld">
+		<div class="header-child">
 			<div class="header-child1"><img src="img/login.svg" width="54" height="54" ></div>
 			<button class="header-child2" type="button"  onmousedown="viewReg()"><p>вход/регистрация</p></button>
 		</div>
@@ -152,18 +144,20 @@
 	</div>
 
 	<div class="property" id="property">
-		<a href="php/exit.php"><p>Выйти</p></a>
+		<div class="prop-child">
+			<img src="img/list.svg" alt="list" width="30" height="30">
+			<a class = "sett1" href="person.php"><p>история</p></a><br>
+		</div>
+		<div class="prop-child">
+			<img src="img/logout.svg" alt="list" width="30" height="30">
+			<a class = "sett2" href="php/exit.php"><p>выйти</p></a>
+		</div>
+		
 	</div>
-
-
-
-
-
-
 
 	<div class="upload" id="upload">
 		<form method="post" action="" enctype="multipart/form-data">
-			<button class="file-exit" type="button" onmousedown="closeFill()"><img src="img/cancel.svg" alt="exit" width="20" height="20"></button>
+			<button class="file-exit" type="button" onmousedown="closeFill()"><img src="img/cancel.svg" alt="exit" width="15" height="15"></button>
 			<p>
 				<input class="uptext" type="file" name="file" size="50">
 			</p>
