@@ -26,9 +26,11 @@
 <body>
 	<div class="fill-black" id="fill-black"></div>
 	<div class="header">
-		<h1 class="header-child">
-			C A L C U L A T O R
-		</h1>
+		<a href="index.php">
+			<h1 class="header-child">
+				C A L C U L A T O R
+			</h1>
+		</a>
 		<div class="header-child">
 			<p class="txt-user">Привет, <?=$_COOKIE['user']?>!</p>
 			<p class="txt-user"><button class="txt-user-b" type="button" onmousedown="viewProp()"><img src="img/user.svg" width="50" height="50"></button>

@@ -30,7 +30,7 @@
 }
 .header{
     position:fixed;
-    z-index: 0;
+    z-index: 1;
     width: 100%;
     background: #C4C4C4;
     height: 100px;
@@ -52,7 +52,7 @@
 }
 .txt-user:first-child{
     position: fixed;
-    margin-top:30px;
+    margin-top:24px;
     margin-left:1010px;
     font-size: 170%;
     -webkit-box-sizing: border-box;
@@ -383,26 +383,28 @@ button:hover {
     padding-top:25px;
 }
 
-.prop-child:first-child{
+.prop-child{
+    position: fixed;
     margin-top:20px;
     margin-left: 10px;
     float: left;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
 }
-.prop-child:last-child{
+.prop-child1{
+    position: fixed;
     margin-top:80px;
     margin-left: 10px;
+    float: left;
 }
 .sett1{
     position:absolute;
-    margin-left: 20px;
+    margin-top:19px;
+    margin-left: 50px;
     font-size: 200%;
 }
 .sett2{
     position:absolute;
-    margin-left: 20px;
+    margin-top:78px;
+    margin-left: 50px;
     font-size: 200%;
 }
 a{

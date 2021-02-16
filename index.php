@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 	<meta charset="utf-8">
 	<style>
 		* {
@@ -26,9 +28,11 @@
 <body>
 	<div class="fill-black" id="fill-black"></div>
 	<div class="header">
-		<h1 class="header-child">
-			C A L C U L A T O R
-		</h1>
+		<a href="index.php">
+			<h1 class="header-child">
+				C A L C U L A T O R
+			</h1>
+		</a>
 		<?php if ($_COOKIE['user'] != ''):?> 
 		<div class="header-child">
 				<p class="txt-user">Привет, <?=$_COOKIE['user']?>!</p>
@@ -144,15 +148,18 @@
 	</div>
 
 	<div class="property" id="property">
-		<div class="prop-child">
-			<img src="img/list.svg" alt="list" width="30" height="30">
-			<a class = "sett1" href="person.php"><p>история</p></a><br>
+		<div>
+			<a href="person.php">
+				<img class="prop-child" src="img/list.svg" alt="list" width="30" height="30">
+				<p class = "sett1">история</p>
+			</a>
 		</div>
-		<div class="prop-child">
-			<img src="img/logout.svg" alt="list" width="30" height="30">
-			<a class = "sett2" href="php/exit.php"><p>выйти</p></a>
+		<div >
+			<a href="php/exit.php">
+				<img  class="prop-child1" src="img/logout.svg" alt="exit" width="30" height="30">
+				<p class = "sett2">выйти</p>
+			</a>
 		</div>
-		
 	</div>
 
 	<div class="upload" id="upload">
@@ -171,7 +178,7 @@
 
 	<div class="foot">
 		<h1 class="creators">
-			2021   CREATORS:KORNILOV KATAUROVA SHABALIN DAMINOV
+			2021   CREATORS: KORNILOV KATAUROVA SHABALIN DAMINOV
 		</h1>
 	</div>
 	<script src ="jss/main.js"></script>
