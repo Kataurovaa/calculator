@@ -9,6 +9,13 @@
 #define SIZE 100
 
 // rpn
+typedef struct complex
+{
+    double re;
+    double im;
+} complex;
+
+
 void insert(char qu[], int* q, char a)
 {
     qu[*q] = a;
@@ -109,32 +116,56 @@ int priority(char a) {
     }
 }
 
-double r(double a[], int o, char znak)
+complex r(complex a[], int o, char znak)
 {
     float cons;
     switch (znak)
     {
     case '+':
-        a[o - 2] = a[o - 2] + a[o - 1];
+        a[o - 2].re = a[o - 2].re + a[o - 1].re;
+        a[o - 2].im = a[o - 2].im + a[o - 1].im;
         return a[o - 2];
         break;
 
     case '-':
-        a[o - 2] = a[o - 2] - a[o - 1];
+        a[o - 2].re = a[o - 2].re - a[o - 1].re;
+        a[o - 2].im = a[o - 2].im - a[o - 1].im;
         return a[o - 2];
         break;
 
     case '*':
-        a[o - 2] = a[o - 2] * a[o - 1];
+        a[o - 2].re = a[o - 2].re * a[o - 1].re - a[o - 2].im * a[o - 1].im;
+        a[o - 2].im = a[o - 2].re * a[o - 1].im + a[o - 2].im * a[o - 1].re;
         return a[o - 2];
         break;
 
     case '/':
-        a[o - 2] = a[o - 2] / a[o - 1];
+        if (a[o - 2].im != 0 && a[o - 1].im != 0)
+        {
+            double tmp = a[o - 1].re * a[o - 1].re + a[o - 1].im * a[o - 1].im;
+            a[o - 2].re = (a[o - 2].re * a[o - 1].re + a[o - 2].im * a[o - 1].im) / tmp;
+            a[o - 2].im = (a[o - 2].im * a[o - 1].re - a[o - 2].re * a[o - 1].im) / tmp;
+        }
+        else
+        {
+            a[o - 2].re = a[o - 2].re / a[o - 1].re;
+            a[o - 2].im = 0;
+        }
+            
         return a[o - 2];
         break;
 
     case '^':
+        if (int(a[o - 1].re) % 4 == 0)
+        {
+            a[o - 2].re = pow(a[o - 2].re, a[o - 1].re) + pow(a[o - 2].im, a[o - 1].re);
+            a[o - 2].im = 0;
+        }
+        if (int(a[o - 1].re) % 4 == 2)
+        {
+            a[o - 2].re = pow(a[o - 2].re, a[o - 1].re) - pow(a[o - 2].im, a[o - 1].re);
+            a[o - 2].im = 0;
+        }
         a[o - 2] = pow(a[o - 2], a[o - 1]);
         return a[o - 2];
         break;
@@ -146,17 +177,16 @@ double r(double a[], int o, char znak)
     }
 }
 
+
 typedef struct var
 {
     int mar; // формула
     char name[SIZE];
     char formula[SIZE];
-    double re;
-    double im;
-    double val;
+    complex val;
 } var;
 
-double find(var var[], char per[], int lenght) {
+complex find(var var[], char per[], int lenght) {
     int f = 0, j = 0, comp = 0;
     while (f == 0)
     {
@@ -176,7 +206,7 @@ double find(var var[], char per[], int lenght) {
     }
 }
 
-double func(char f, double value) {
+complex func(char f, complex value) {
     if (f == 'c')
         return cos(value);
     if (f == 's')
@@ -195,11 +225,11 @@ double func(char f, double value) {
         return sqrt(value);
 }
 
-double rpn(char str[], var variables[]) {
+complex rpn(char str[], var variables[]) {
 
     char  stack[SIZE], queue[SIZE], queue1[SIZE], str1[SIZE], str2[SIZE], f;
     int prip = -1, pric, s = 0, i, q = 0, j = 0, q1 = 0, q2 = 0, ai = 0, o = 0, indpoint = 0;
-    double out[SIZE], val_func = 0;
+    complex out[SIZE], val_func;
     int a[SIZE], mini_stack = 0;
     /*for (i = 0; str[i]!=' '; i++)
     {
@@ -448,14 +478,14 @@ void parser(var* variables) {
             tmp1[k] = variables->formula[i];
             k++;
         }
-        variables->re = atof(tmp1); int j = 0;
+        variables->val.re = atof(tmp1); int j = 0;
         for (int i = k; variables->formula[i] != 'j'; i++) {
 
             tmp2[j] = variables->formula[i];
             j++;
             k++;
         }
-        variables->im = atof(tmp2);
+        variables->val.im = atof(tmp2);
         //variables->x = variables->re + variables->im * I;
     } // парсит комл число
     else {
@@ -468,9 +498,8 @@ void parser(var* variables) {
 
         }
         if (mar == 0) {
-            variables->val = atof(variables->formula);
-            variables->re = atof(variables->formula);
-            variables->im = 0;
+            variables->val.re = atof(variables->formula);
+            variables->val.im = 0;
         }
     }
 }
@@ -484,10 +513,12 @@ int main()
     FILE* out = fopen("C:/Server/data/htdocs/calculator/calc/Release/out.txt", "w");
     int n;
     variables[0].name[0] = 'e';
-    variables[0].val = 2.718281828459045235;
+    variables[0].val.re = 2.718281828459045235;
+    variables[0].val.im = 0;
     variables[1].name[0] = 'p';
     variables[1].name[1] = 'i';
-    variables[1].val = 3.1415926535897932384;
+    variables[1].val.re = 3.1415926535897932384;
+    variables[1].val.im = 0;
     fscanf(inp, "%d", &n);
     fscanf(inp, "%s", formula);
     printf("%s", formula);
@@ -506,9 +537,9 @@ int main()
     //variables[2].val = rpn(strcat(variables[2].formula," "), variables);
     //variables[1].val = rpn(strcat(variables[1].formula," "), variables);
     //variables[0].val = rpn(strcat(variables[0].formula," "), variables);
-    double itog = rpn(strcat(formula, " "), variables);
-    if (itog == -0)
-        itog = 0;
+    complex itog = rpn(strcat(formula, " "), variables);
+    //if (itog == -0)
+    //    itog = 0;
     printf("%f", itog);
     fprintf(out, "%f", itog);
     for (int i = 0; i < n - 1; i++) {
