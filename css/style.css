@@ -257,17 +257,18 @@ button:hover {
     visibility: hidden;
     width:365px;
 	height: 200px;
-    margin-left:650px;
+    margin-left:605px;
 	margin-top: 270px;
     border: outset black;
-    background: #FFFFFF;
+    background: #C4C4C4;
     position: fixed; z-index: 100;
 }
 .uptext{
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left:70px;
+    padding-top: 35px;
     width:230px;
-	height: 35px;
+	height: 120px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -321,7 +322,7 @@ button:hover {
     outline: none !important;
     cursor: pointer;
     border: none;
-    background: #ffffff;
+    background: #C4C4C4;
 }
 .window-word{
     font-size: 200%;
