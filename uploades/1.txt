@@ -1,2 +1,5 @@
-1
-2 + 2
+4
+exp(pi*alpha*len/s1)
+alpha = sqrt(s1)
+len = 2
+s1 = 1.5

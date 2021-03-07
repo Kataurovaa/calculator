@@ -1,11 +1,8 @@
-
-
-
-
-
 <!DOCTYPE html>
 <html>
+
 <head>
+
 	<meta charset="utf-8">
 	<style>
 		* {
@@ -31,20 +28,19 @@
 <body>
 	<div class="fill-black" id="fill-black"></div>
 	<div class="header">
-		<h1 class="header-child">
-			C A L C U L A T O R
-		</h1>
+		<a href="index.php">
+			<h1 class="header-child">
+				C A L C U L A T O R
+			</h1>
+		</a>
 		<?php if ($_COOKIE['user'] != ''):?> 
-		<div class="header-chld">
-			<div class="header-child1">
-			<p class="txt-user">Привет, <?=$_COOKIE['user']?>!</p>
-				<p class="txt-user">
-					<button type="button" onmousedown="viewProp()"><img src="img/user.svg" width="50" height="50"></button>
+		<div class="header-child">
+				<p class="txt-user">Привет, <?=$_COOKIE['user']?>!</p>
+				<p class="txt-user"><button class="txt-user-b" type="button" onmousedown="viewProp()"><img src="img/user.svg" width="50" height="50"></button>
 				</p>
-			</div>
 		</div>
 		<?php else: ?>
-		<div class="header-chld">
+		<div class="header-child">
 			<div class="header-child1"><img src="img/login.svg" width="54" height="54" ></div>
 			<button class="header-child2" type="button"  onmousedown="viewReg()"><p>вход/регистрация</p></button>
 		</div>
@@ -113,9 +109,19 @@
 		<div>
 			<h1 class="e-word" align="center">РЕШЕНИЕ</h1>
 			<div class="d-field">
+				<h1 class="d-word">
 				<?php
-					system("C:/Server/data/htdocs/calculator/calc/release/calc.exe") or die("Err");
+					exec("C:/Server/data/htdocs/calculator/calc/release/calc.exe") or die("Err");
+					$fd = fopen("calc/Release/out.txt", 'r') or die("не удалось открыть файл");
+					while(!feof($fd))
+					{
+    					$str = fgets($fd);
+    					echo $str;
+    					echo "<br/>";
+					}
+					fclose("calc/Release/out.txt");				
 				?>
+				</h1>
 			</div>
 		</div>
 	</div>
@@ -150,18 +156,23 @@
 	</div>
 
 	<div class="property" id="property">
-		<a href="php/exit.php"><p>Выйти</p></a>
+		<div>
+			<a href="person.php">
+				<img class="prop-child" src="img/list.svg" alt="list" width="30" height="30">
+				<p class = "sett1">история</p>
+			</a>
+		</div>
+		<div >
+			<a href="php/exit.php">
+				<img  class="prop-child1" src="img/logout.svg" alt="exit" width="30" height="30">
+				<p class = "sett2">выйти</p>
+			</a>
+		</div>
 	</div>
-
-
-
-
-
-
 
 	<div class="upload" id="upload">
 		<form method="post" action="" enctype="multipart/form-data">
-			<button class="file-exit" type="button" onmousedown="closeFill()"><img src="img/cancel.svg" alt="exit" width="20" height="20"></button>
+			<button class="file-exit" type="button" onmousedown="closeFill()"><img src="img/cancel.svg" alt="exit" width="15" height="15"></button>
 			<p>
 				<input class="uptext" type="file" name="file" size="50">
 			</p>
@@ -175,7 +186,7 @@
 
 	<div class="foot">
 		<h1 class="creators">
-			2021   CREATORS:KORNILOV KATAUROVA SHABALIN DAMINOV
+			2021   CREATORS: KORNILOV KATAUROVA SHABALIN DAMINOV
 		</h1>
 	</div>
 	<script src ="jss/main.js"></script>
