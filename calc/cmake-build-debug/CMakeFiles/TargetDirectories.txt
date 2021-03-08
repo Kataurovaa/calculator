@@ -1,0 +1,3 @@
+C:/Server/data/htdocs/calculator/calc/cmake-build-debug/CMakeFiles/calc.dir
+C:/Server/data/htdocs/calculator/calc/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Server/data/htdocs/calculator/calc/cmake-build-debug/CMakeFiles/rebuild_cache.dir

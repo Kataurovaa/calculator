@@ -111,15 +111,15 @@
 			<div class="d-field">
 				<h1 class="d-word">
 				<?php
-					exec("C:/Server/data/htdocs/calculator/calc/release/calc.exe") or die("Err");
-					$fd = fopen("calc/Release/out.txt", 'r') or die("не удалось открыть файл");
+					exec("C:/Server/data/htdocs/calculator/calc/cmake-build-debug/calc.exe") or die("Err");
+					$fd = fopen("calc/cmake-build-debug/out.txt", 'r') or die("не удалось открыть файл");
 					while(!feof($fd))
 					{
     					$str = fgets($fd);
     					echo $str;
     					echo "<br/>";
 					}
-					fclose("calc/Release/out.txt");				
+					fclose("calc/cmake-build-debug/out.txt");				
 				?>
 				</h1>
 			</div>
