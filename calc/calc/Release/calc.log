@@ -1,10 +1,12 @@
 ﻿  Source.cpp
-C:\Server\data\htdocs\calculator\calc\calc\Source.cpp(83,12): warning C4244: return: преобразование "double" в "float", возможна потеря данных
-C:\Server\data\htdocs\calculator\calc\calc\Source.cpp(114,11): warning C4101: cons: неиспользованная локальная переменная
-C:\Server\data\htdocs\calculator\calc\calc\Source.cpp(200,37): warning C4101: queue1: неиспользованная локальная переменная
+C:\Server\data\htdocs\calculator\calc\calc\Source.cpp(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Server\data\htdocs\calculator\calc\calc\Source.cpp(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Server\data\htdocs\calculator\calc\calc\rpn.h(81,12): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+C:\Server\data\htdocs\calculator\calc\calc\rpn.h(112,11): warning C4101: cons: неиспользованная локальная переменная
+C:\Server\data\htdocs\calculator\calc\calc\rpn.h(190,37): warning C4101: queue1: неиспользованная локальная переменная
   Создание кода
-  1 of 18 functions ( 5.6%) were compiled, the rest were copied from previous compilation.
+  0 of 18 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
   calc.vcxproj -> C:\Server\data\htdocs\calculator\calc\Release\calc.exe
